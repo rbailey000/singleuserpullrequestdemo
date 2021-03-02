@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Tags and Console Log</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="index.css">  -->
+  <!-- my code -->
+
+  <script src="https://kit.fontawesome.com/f45fc09065.js" crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="index.js"></script>  -->
+  <!-- my code -->
+  <style>
+
+    body {
+      font-size: 16px;
+    }
+
+    h1 {
+      display: inline-block;
+      font-family: 'Fantique Four';
+      font-size: 3rem;
+    }
+
+    section {
+      font-family: 'Akaya Telivigala';
+      font-size: 3em;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: .4em;
+    }
+
+    i {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <i class="fab fa-empire" style="font-size:3em"></i>
+  <button id="addRebel">
+    add icon
+  </button>
+  <button id="removeRebel">
+    remove icon
+  </button>
+  <h1 id="hedding" style="text-align:center;">Four Pete's Sake, This Font is Fantastic!</h1>
+
+  <section>
+    Using a google font
+  </section>
+  <article>
+    Not using a google font
+  </article>
+  <!--Inline script-->
+
+
+
+  <!--Link to external Javascript file-->
+  <!-- <script type="text/javascript" src="index.js"></script> -->
+  <script type="text/javascript">
+    let hedding = document.getElementById("hedding");
+
+    let addRebelElem= document.getElementById("addRebel");
+    let removeRebelElem = document.getElementById("removeRebel");
+
+    addRebelElem.addEventListener('click', addRebel);
+    removeRebelElem.addEventListener('click', removeRebel);
+
+    function addRebel() {
+      hedding.innerHTML += '<i class="fab fa-rebel"></i>';
+    }
+
+    function removeRebel() {
+      //hedding.innerHTML = hedding.innerHTML.slice(0, -1);
+      hedding.removeChild(hedding.lastChild);
+    }
+
+    //Console logs write data directly to the console.
+    console.log("This is a literal expression and will never change ... ");
+  </script>
+
+</body>
+</html>
